@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The plugin.dtd file is located in the OXYGEN_INSATALL_DIR/plugins directory -->
+<!DOCTYPE plugin SYSTEM "../plugin.dtd">
+
+<plugin
+    class="ro.sync.exml.plugin.Plugin"
+
+    id="web-author-user-role-plugin"
+    name="Web Author User Role plugin"
+    description="A plugin for oXygen XML Web Author that provides DocumentTypeCustomRuleMatcher implementations based on the user role."
+    version="${project.nosnapshot.version}"
+    vendor="Syncro Soft">
+
+  <runtime>
+    <librariesFolder name="lib" scope="global"/>
+    <library name="target/classes" scope="global"/>
+  </runtime>
+
+  <extension type="WorkspaceAccess" class="com.oxygenxml.webapp.userrole.UserRoleSetterExtension"/>
+</plugin>
