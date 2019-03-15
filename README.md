@@ -2,7 +2,7 @@ Web Author User Role Plugin
 ===========================
 
 
-This plugin provides building-blocks to customize the user interface accroding to the user role. It is meant for developers as a starting point rather than a read-to-use plugin.
+This plugin provides building-blocks to customize the user interface accroding to the user role. It is meant for developers as a starting point rather than a ready-to-use plugin.
 
 The user role is passed in as a [loading option](https://www.oxygenxml.com/maven/com/oxygenxml/oxygen-webapp/21.0.0.0/jsdoc/tutorial-loadingoptions.html), or an URL parameter with the name `user-role`. The role is set once the first document in a session is loaded and cannot be changed for that session. The currently recognize user roles are "author", "reviewer" and "sme".
 
