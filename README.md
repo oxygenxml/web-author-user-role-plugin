@@ -8,7 +8,11 @@ The user role is passed in as a [loading option](https://www.oxygenxml.com/maven
 
 It includes:
 
-- Implementations of `ro.sync.ecss.extensions.api.DocumentTypeCustomRuleMatcher` that match one of the supported user roles. These can be used to activate certain frameworks only for certain users.
+- Implementations of `ro.sync.ecss.extensions.api.DocumentTypeCustomRuleMatcher` that match one of the supported user roles. These can be used to activate certain frameworks only for certain users. 
+If you want to use Oxygen XML Editor to configure your framework:
+  - Open the document type configuration dialog box for your framework.
+  - Add the compiled classes of this plugin in the **Classpath** tab.
+  - In the `Association rules` tab, select the class that corresponds to the role of the user that the framework applies to.
 
 Copyright and License
 ---------------------
