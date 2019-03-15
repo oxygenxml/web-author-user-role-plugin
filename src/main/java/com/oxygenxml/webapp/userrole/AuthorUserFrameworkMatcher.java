@@ -5,9 +5,9 @@ package com.oxygenxml.webapp.userrole;
  * 
  * @author cristi_talau
  */
-public class AdvancedUserFrameworkMatcher extends UserRuleFrameworkMatcher {
+public class AuthorUserFrameworkMatcher extends UserRuleFrameworkMatcher {
 
-  public AdvancedUserFrameworkMatcher() {
+  public AuthorUserFrameworkMatcher() {
     super("author");
   }
 
