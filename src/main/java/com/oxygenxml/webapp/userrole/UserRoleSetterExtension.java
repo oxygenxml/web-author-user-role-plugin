@@ -36,7 +36,7 @@ public class UserRoleSetterExtension implements WorkspaceAccessPluginExtension{
         public void editingSessionAboutToBeStarted(String docId, String licenseeId, URL systemId, Map<String, Object> options)
             throws EditingSessionOpenVetoException {
           String sessionId = systemId.getUserInfo();
-          if (sessionId != null && sessionStore.get(sessionId, USER_ROLE_OPTION_NAME) != null) {
+          if (sessionId != null && sessionStore.get(sessionId, USER_ROLE_OPTION_NAME) == null) {
             String userRole = getUserRole(sessionId, options);
             if (userRole != null) {
               sessionStore.put(sessionId, USER_ROLE_OPTION_NAME, userRole);
