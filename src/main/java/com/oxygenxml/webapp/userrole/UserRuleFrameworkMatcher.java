@@ -3,27 +3,23 @@ package com.oxygenxml.webapp.userrole;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.apache.log4j.Logger;
 import org.xml.sax.Attributes;
 
+import lombok.extern.slf4j.Slf4j;
+import ro.sync.basic.util.URLUtil;
 import ro.sync.ecss.extensions.api.DocumentTypeCustomRuleMatcher;
 import ro.sync.ecss.extensions.api.webapp.SessionStore;
 import ro.sync.ecss.extensions.api.webapp.access.WebappPluginWorkspace;
 import ro.sync.exml.workspace.api.PluginWorkspaceProvider;
-import ro.sync.basic.util.URLUtil;
 
 /**
  * Framework matcher based on user role.
  * 
  * @author cristi_talau
  */
+@Slf4j
 public class UserRuleFrameworkMatcher implements DocumentTypeCustomRuleMatcher {
-  /**
-   * Logger for logging.
-   */
-  static final Logger logger = 
-      Logger.getLogger(UserRuleFrameworkMatcher.class.getName());
-  
+
   /**
    * The role to match.
    */
@@ -51,7 +47,7 @@ public class UserRuleFrameworkMatcher implements DocumentTypeCustomRuleMatcher {
         match = role.equals(currentRole);
       }
     } catch (MalformedURLException e) {
-      logger.warn("Could match user info for URL: " + URLUtil.clearUserInfo(systemID));
+      log.warn("Could match user info for URL: " + URLUtil.clearUserInfo(systemID));
     }
     return match;
   }

@@ -19,7 +19,7 @@
   </developers>
 
   <properties>
-    <oxygen.sdk.version>21.0.0.0</oxygen.sdk.version>
+     <oxygen.sdk.version>24.1-SNAPSHOT</oxygen.sdk.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -45,6 +45,12 @@
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
           <version>3.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.22</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
