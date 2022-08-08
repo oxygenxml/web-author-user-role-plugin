@@ -13,6 +13,9 @@ If you want to use Oxygen XML Editor to configure your framework:
   - Open the document type configuration dialog box for your framework.
   - Add the compiled classes of this plugin in the **Classpath** tab.
   - In the `Association rules` tab, select the class that corresponds to the role of the user that the framework applies to.
+  
+## Installation
+To install this plugin, download one of the releases ([link](https://github.com/oxygenxml/web-author-user-role-plugin/releases)) and [upload it in your Web Author deployment](https://www.oxygenxml.com/doc/ug-webauthor/topics/webapp-configure-plugins.html).
 
 Copyright and License
 ---------------------
