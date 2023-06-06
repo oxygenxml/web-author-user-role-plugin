@@ -19,12 +19,14 @@
   </developers>
 
   <properties>
-     <oxygen.sdk.version>26.0-SNAPSHOT</oxygen.sdk.version>
+    <oxygen.sdk.version>26.0-SNAPSHOT</oxygen.sdk.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
   </properties>
 
   <repositories>
-    <!-- Download artifacts from the oXygem XML Maven Repository-->
+    <!-- Download artifacts from the Oxygen XML Maven Repository-->
     <repository>
       <id>oxygenxml</id>
       <name>oXygen XML SDK Maven Repository</name>
