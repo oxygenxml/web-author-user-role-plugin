@@ -44,7 +44,10 @@ public class UserRuleFrameworkMatcher implements DocumentTypeCustomRuleMatcher {
       sessionId = new URL(systemID).getUserInfo();
       if (sessionId != null) {
         String currentRole = sessionStore.get(sessionId, UserRoleSetterExtension.USER_ROLE_OPTION_NAME);
-        match = role.equals(currentRole);
+        if (currentRole == null) {
+          currentRole = sessionStore.get(sessionId, UserRoleSetterExtension.USER_ROLE_OPTION_ALTERNATE_NAME);
+        }
+        match = role.equalsIgnoreCase(currentRole);
       }
     } catch (MalformedURLException e) {
       log.warn("Could match user info for URL: " + URLUtil.clearUserInfo(systemID));
