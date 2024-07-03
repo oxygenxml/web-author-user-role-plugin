@@ -23,6 +23,11 @@ public class UserRoleSetterExtension implements WorkspaceAccessPluginExtension{
    */
   public static final String USER_ROLE_OPTION_NAME = "user-role";
 
+  /**
+   * Alternate name for the option - used in CF.
+   */
+  public static final String USER_ROLE_OPTION_ALTERNATE_NAME = "userRole";
+
   public boolean applicationClosing() {
     return false;
   }
